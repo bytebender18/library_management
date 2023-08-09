@@ -275,7 +275,7 @@ def update_user(user_id):
 
 
 @app.route('/api/users/<int:user_id>', methods=['GET'])
-def getUserById(user_id):
+def get_user_by_id(user_id):
 	try:
 		select_query = """select * from library_user where user_id = '{}' """.format(user_id)
 		cursor.execute(select_query)
